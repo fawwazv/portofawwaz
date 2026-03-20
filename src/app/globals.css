@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f9fafb; /* bg-gray-50 Tailwind */
+}
+
+@layer utilities {
+  .animate-marquee {
+    animation: marquee 20s linear infinite;
+    min-width: max-content;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
