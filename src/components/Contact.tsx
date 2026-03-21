@@ -65,7 +65,7 @@ export default function Contact() {
 
         {/* Footer yang sebelumnya hilang */}
         <div className="mt-24 pt-8 border-t border-slate-800/80 text-slate-500 text-sm flex flex-col items-center">
-          <p>© 2026 Muhammad Fawwazul Haq. Dibuat dengan penuh semangat di Bekasi.</p>
+          <p>© 2026 Muhammad Fawwazul Haq. All Rights Reserved.</p>
         </div>
       </div>
     </section>

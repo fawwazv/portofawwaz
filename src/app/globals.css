@@ -9,16 +9,15 @@ html {
   scroll-behavior: smooth;
 }
 
-/* TEMA GELAP DENGAN POLA TITIK-TITIK */
-body {
-  background-color: #0f172a; /* Slate-900 (Biru Dongker Gelap) */
+/* JADIKAN UTILITY AGAR TIDAK TERTABRAK CSS RESET TAILWIND */
+@utility bg-dots {
+  background-color: #0f172a; /* Biru Dongker Gelap */
   background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-  background-size: 32px 32px; /* Ukuran jarak antar titik */
-  color: #f8fafc; /* Teks putih keabu-abuan */
+  background-size: 32px 32px;
 }
 
 @utility animate-marquee {
-  animation: marquee 20s linear infinite;
+  animation: marquee 40s linear infinite;
 }
 
 @keyframes marquee {

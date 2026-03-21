@@ -27,7 +27,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      {/* Tambahkan bg-dots dan warna teks bawaan di sini */}
+      <body className="min-h-full flex flex-col bg-dots text-[#f8fafc]">
+        {children}
+      </body>
     </html>
   );
 }
