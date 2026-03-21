@@ -1,5 +1,5 @@
 // Kita ganti import-nya menggunakan react-icons/fa (FontAwesome)
-import { FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaEnvelope, FaGithub } from "react-icons/fa";
 
 export default function Contact() {
   return (
@@ -49,10 +49,20 @@ export default function Contact() {
             <span className="mt-3 font-medium tracking-wide">LinkedIn</span>
           </a>
 
-        </div>
+          {/* 4. Tombol GitHub (BARU) */}
+          {/* Ganti URL di href dengan link profil GitHub Anda */}
+          <a 
+            href="https://github.com/fawwazv" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex flex-col items-center group"
+          >
+            <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center text-3xl group-hover:bg-white group-hover:text-gray-900 transition-all duration-300 shadow-lg group-hover:shadow-xl group-hover:-translate-y-1">
+              <FaGithub />
+            </div>
+            <span className="mt-3 font-medium tracking-wide">GitHub</span>
+          </a>
 
-        <div className="mt-24 pt-8 border-t border-blue-500/50 text-blue-200 text-sm flex flex-col items-center">
-          <p>© 2026 Muhammad Fawwazul Haq. Dibuat dengan penuh semangat di Bekasi.</p>
         </div>
       </div>
     </section>
