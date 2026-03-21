@@ -1,5 +1,3 @@
-import { SiReact, SiJavascript, SiExpress, SiMongodb, SiMysql, SiCisco } from "react-icons/si";
-
 export default function About() {
   return (
     <section id="tentang" className="py-24 px-4 bg-transparent">

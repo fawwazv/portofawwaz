@@ -31,33 +31,36 @@ export default function Certifications() {
   ];
 
   return (
-    <section id="sertifikasi" className="py-24 bg-white px-4">
+    <section id="sertifikasi" className="py-24 bg-transparent px-4">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 inline-block border-b-4 border-blue-600 pb-2">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 inline-block border-b-4 border-blue-500 pb-2">
             Sertifikasi
           </h2>
-          <p className="text-gray-500 mt-4">Pencapaian akademik dan pelatihan profesional yang telah saya selesaikan.</p>
+          <p className="text-slate-400 mt-4">Pencapaian akademik dan pelatihan profesional yang telah saya selesaikan.</p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
           {certs.map((cert, index) => (
-            <div key={index} className="group bg-gray-50 rounded-2xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col sm:flex-row">
+            <div key={index} className="group bg-slate-800/50 backdrop-blur-md rounded-2xl overflow-hidden border border-slate-700 shadow-lg hover:border-blue-500/50 hover:shadow-blue-900/20 transition-all duration-300 flex flex-col sm:flex-row">
               {/* Gambar/Muka Sertifikat */}
-              <div className="w-full sm:w-48 h-48 sm:h-auto overflow-hidden bg-gray-200">
+              <div className="w-full sm:w-48 h-48 sm:h-auto overflow-hidden bg-slate-700/50 border-b sm:border-b-0 sm:border-r border-slate-700 flex items-center justify-center">
+                {/* Fallback jika gambar belum ada di folder public */}
+                <div className="text-slate-500 text-xs italic text-center px-4 absolute z-0">Thumbnail<br/>Sertifikat</div>
                 <img 
                   src={cert.image} 
                   alt={cert.title} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 relative z-10 bg-slate-800"
+                  // Kita hapus baris onError ini agar Server Component berjalan lancar!
                 />
               </div>
               
               {/* Bio & Info Sertifikat */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-1 leading-tight">{cert.title}</h3>
-                  <p className="text-blue-600 text-xs font-bold uppercase tracking-wider mb-3">{cert.issuer}</p>
-                  <p className="text-gray-600 text-sm mb-6 line-clamp-3">
+                  <h3 className="text-lg font-bold text-white mb-1 leading-tight">{cert.title}</h3>
+                  <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-3">{cert.issuer}</p>
+                  <p className="text-slate-300 text-sm mb-6 line-clamp-3">
                     {cert.description}
                   </p>
                 </div>
@@ -66,7 +69,7 @@ export default function Certifications() {
                   href={cert.driveLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center py-2 px-4 bg-white border-2 border-blue-600 text-blue-600 font-bold rounded-lg hover:bg-blue-600 hover:text-white transition-all duration-300 text-sm"
+                  className="inline-flex items-center justify-center py-2 px-4 bg-transparent border-2 border-blue-500 text-blue-400 font-bold rounded-lg hover:bg-blue-600 hover:border-blue-600 hover:text-white transition-all duration-300 text-sm"
                 >
                   Lihat Sertifikat (Drive)
                 </a>

@@ -11,10 +11,10 @@ html {
 
 /* TEMA GELAP DENGAN POLA TITIK-TITIK */
 body {
-  background-color: #0f172a; /* Warna Slate-900 (Biru Dongker Gelap) */
+  background-color: #0f172a; /* Slate-900 (Biru Dongker Gelap) */
   background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
   background-size: 32px 32px; /* Ukuran jarak antar titik */
-  color: #f8fafc; /* Warna teks putih keabu-abuan agar tidak sakit di mata */
+  color: #f8fafc; /* Teks putih keabu-abuan */
 }
 
 @utility animate-marquee {
