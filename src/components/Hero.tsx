@@ -67,14 +67,33 @@ export default function Hero() {
           </div>
 
           {/* Foto Kanan */}
-          <div className="w-full md:w-1/2 flex justify-center relative md:mb-0 mb-4">
-            <div className="absolute inset-0 bg-blue-500 rounded-full blur-[80px] md:blur-[100px] opacity-20 w-48 h-48 md:w-72 md:h-72 m-auto"></div>
-            <div className="absolute z-0 w-48 h-48 md:w-80 md:h-80 bg-slate-800 rounded-full flex items-center justify-center text-slate-500 text-xs italic">Thumbnail<br/>Foto Profil</div>
-            <img 
-              src="/foto-profil.jpg" 
-              alt="Muhammad Fawwazul Haq" 
-              className="w-48 h-48 md:w-80 md:h-80 object-cover rounded-full shadow-2xl border-4 border-slate-700 relative z-10 hover:scale-105 transition duration-300 bg-slate-800"
-            />
+          <div className="w-full md:w-1/2 flex justify-center relative md:mb-0 mb-4 group perspective-1000 animate-float">
+            {/* Glow Latar Belakang */}
+            <div className="absolute inset-0 bg-gradient-to-tr from-blue-600 to-cyan-400 rounded-full blur-[80px] opacity-20 w-56 h-56 md:w-80 md:h-80 m-auto group-hover:opacity-40 group-active:opacity-40 group-hover:scale-110 group-active:scale-110 transition-all duration-700 ease-out"></div>
+            
+            {/* Kontainer Foto dengan Efek Melayang & Rotasi */}
+            <div className="relative w-52 h-52 md:w-[22rem] md:h-[22rem] z-10 transform transition-all duration-700 ease-out group-hover:rotate-2 group-active:rotate-2 group-hover:-translate-y-3 group-active:-translate-y-3 group-hover:scale-105 group-active:scale-105">
+              
+              {/* Layer Dekoratif Belakang */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-[2rem] md:rounded-[3rem] transform -rotate-6 scale-105 opacity-30 group-hover:opacity-50 group-active:opacity-50 group-hover:-rotate-3 group-active:-rotate-3 transition-all duration-700 ease-out shadow-lg"></div>
+              
+              {/* Layer Gambar Utama */}
+              <div className="absolute inset-0 rounded-[2rem] md:rounded-[3rem] overflow-hidden border border-white/10 bg-slate-800/80 shadow-2xl backdrop-blur-sm group-hover:border-blue-400/50 group-active:border-blue-400/50 transition-colors duration-500 cursor-pointer">
+                {/* Fallback Text jika gambar gagal load */}
+                <div className="absolute inset-0 flex items-center justify-center text-slate-500 text-xs italic z-0">
+                  Thumbnail<br/>Foto Profil
+                </div>
+                
+                <img 
+                  src="/foto-profil.jpg" 
+                  alt="Muhammad Fawwazul Haq" 
+                  className="relative w-full h-full object-cover z-10 transition-transform duration-700 ease-out group-hover:scale-110 group-active:scale-110 bg-slate-800"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none';
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

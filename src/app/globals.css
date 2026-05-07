@@ -11,9 +11,17 @@ html {
 
 /* JADIKAN UTILITY AGAR TIDAK TERTABRAK CSS RESET TAILWIND */
 @utility bg-dots {
-  background-color: #0f172a; /* Biru Dongker Gelap */
-  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px);
-  background-size: 32px 32px;
+  background-color: #080c17; /* Biru Dongker Ekstra Gelap */
+  background-image: 
+    /* Gradient highlight dari atas */
+    radial-gradient(ellipse at 50% 0%, rgba(29, 78, 216, 0.15) 0%, transparent 60%),
+    /* Gradient highlight dari bawah/sudut */
+    radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+    /* Pola dots yang lebih subtle */
+    radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 32px 32px;
+  background-position: 0 0, 0 0, 0 0;
+  background-attachment: fixed;
 }
 
 @utility animate-marquee {
@@ -23,4 +31,14 @@ html {
 @keyframes marquee {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+
+@utility animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
 }

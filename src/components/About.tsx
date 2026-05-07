@@ -64,7 +64,7 @@ export default function About() {
 
               <div className="flex flex-col sm:flex-row border-b border-slate-700 pb-4">
                 <span className="w-40 font-semibold text-blue-400 mb-1 sm:mb-0">Domisili</span>
-                <span className="text-slate-200">Bekasi, Jawa Barat</span>
+                <span className="text-slate-200">Bekasi dan Kota Tasikmalaya, Jawa Barat</span>
               </div>
               <div className="flex flex-col sm:flex-row">
                 <span className="w-40 font-semibold text-blue-400 mb-1 sm:mb-0">Tanggal Lahir</span>
