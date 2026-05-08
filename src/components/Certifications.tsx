@@ -5,6 +5,15 @@ import { FaExternalLinkAlt } from "react-icons/fa";
 export default function Certifications() {
   const certifications = [
     {
+      title: "Backend Development Fundamental",
+      issuer: "MySkill",
+      description: "Pemahaman mendalam mengenai arsitektur backend, database relasional, dan pengembangan API menggunakan best practices terkini.",
+      date: "2024",
+      expiry: "2027",
+      image: "/certs/myskill-backend.jpg",
+      driveLink: "#" 
+    },
+    {
       title: "Belajar Membuat Aplikasi Back-End Pemula",
       issuer: "Dicoding Indonesia",
       description: "Mempelajari fundamental backend development, membangun RESTful API dengan Node.js, dan pengelolaan environment.",
@@ -44,25 +53,25 @@ export default function Certifications() {
 
   return (
     <section id="sertifikasi" className="py-24 bg-transparent px-4">
-      <div className="max-w-4xl mx-auto"> {/* Sama dengan ukuran Proyek */}
+      <div className="max-w-6xl mx-auto px-2">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4 inline-block border-b-4 border-blue-500 pb-2">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white mb-4 inline-block border-b-4 border-blue-500 pb-2 transition-colors">
             Sertifikasi
           </h2>
-          <p className="text-slate-400 mt-4">
-            Pengakuan formal atas kompetensi teknis yang telah saya raih.
+          <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mt-4 transition-colors">
+            Validasi kompetensi dan pengetahuan di berbagai bidang teknologi dari lembaga terpercaya.
           </p>
         </div>
 
-        {/* Grid 2 kolom dengan gap yang lebih rapat (gap-8) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {/* Layout Flex Wrap (3 Kolom) sama seperti Proyek */}
+        <div className="flex flex-wrap justify-center gap-8">
           {certifications.map((cert, index) => (
             <div 
               key={index} 
-              className="bg-slate-800/50 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-slate-700 hover:border-blue-500/50 hover:shadow-blue-900/20 transition duration-300 flex flex-col group"
+              className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.333rem)] bg-white/70 dark:bg-slate-800/50 backdrop-blur-md rounded-2xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 hover:shadow-blue-500/20 dark:hover:shadow-blue-900/20 transition duration-300 flex flex-col group"
             >
               {/* Gambar disamakan tingginya dengan Proyek (h-48) */}
-              <div className="h-48 bg-slate-700/50 flex items-center justify-center border-b border-slate-700 overflow-hidden relative">
+              <div className="h-48 bg-slate-100 dark:bg-slate-700/50 flex items-center justify-center border-b border-slate-200 dark:border-slate-700 overflow-hidden relative transition-colors">
                 {cert.image ? (
                   <img 
                     src={cert.image} 
@@ -73,41 +82,37 @@ export default function Certifications() {
                     }}
                   />
                 ) : null}
-                <div className="absolute inset-0 bg-blue-900/10 group-hover:bg-blue-900/20 transition duration-300 pointer-events-none"></div>
-              </div>
-
-              {/* Bagian Konten */}
-              <div className="p-6 flex flex-col flex-grow">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="text-[10px] uppercase tracking-wider font-bold bg-blue-900/30 text-blue-300 px-2 py-1 rounded border border-blue-800/50">
-                    {cert.issuer}
-                  </span>
+                {/* Overlay text fallback sama seperti proyek */}
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                   <span className="text-slate-400/50 dark:text-white/20 font-bold text-lg group-hover:text-slate-500/70 dark:group-hover:text-white/40 transition-colors uppercase tracking-widest px-4 text-center">{cert.title}</span>
                 </div>
-
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                  {cert.title}
-                </h3>
-
-                <p className="text-slate-300 text-sm leading-relaxed mb-6 flex-grow">
+              </div>
+              
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-4">
+                  <div className="flex flex-col gap-2">
+                    <span className="text-xs uppercase tracking-wider font-bold bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 px-2.5 py-1 rounded-md border border-blue-200 dark:border-blue-800/50 w-fit transition-colors">
+                      {cert.issuer}
+                    </span>
+                    <span className="text-xs text-slate-500 dark:text-slate-400 font-medium transition-colors">
+                      {cert.date} - {cert.expiry}
+                    </span>
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 transition-colors">{cert.title}</h3>
+                <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6 flex-grow transition-colors">
                   {cert.description}
                 </p>
-
-                {/* Info Tanggal dan Link */}
-                <div className="mt-auto pt-4 border-t border-slate-700/50 flex items-end justify-between">
-                  <div className="text-[10px] text-slate-500 font-mono space-y-1">
-                    <p>ISS: {cert.date}</p>
-                    <p>EXP: {cert.expiry}</p>
-                  </div>
-
-                  <a 
-                    href={cert.driveLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-400 font-semibold text-sm hover:text-blue-300 hover:underline flex items-center gap-1 transition-all active:scale-95"
-                  >
-                    Kredensial <FaExternalLinkAlt className="text-[10px]" />
-                  </a>
-                </div>
+                
+                <a 
+                  href={cert.driveLink} 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-500 px-5 py-2.5 rounded-full transition-colors w-fit shadow-md shadow-blue-500/20"
+                >
+                  Lihat Kredensial <FaExternalLinkAlt className="w-3.5 h-3.5" />
+                </a>
               </div>
             </div>
           ))}
