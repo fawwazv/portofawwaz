@@ -57,7 +57,7 @@ export default function Hero() {
             
             {/* Tombol Menarik */}
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start w-full sm:w-auto px-4 sm:px-0">
-              <Link href="#proyek" className="w-full sm:w-auto bg-blue-600 text-white px-8 py-2.5 md:py-3 rounded-full font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-500/30 text-center text-xs md:text-sm uppercase tracking-wider">
+              <Link href="#pengalaman" className="w-full sm:w-auto bg-blue-600 text-white px-8 py-2.5 md:py-3 rounded-full font-bold hover:bg-blue-500 transition shadow-lg shadow-blue-500/30 text-center text-xs md:text-sm uppercase tracking-wider">
                 Lihat Proyek
               </Link>
               <Link href="#kontak" className="w-full sm:w-auto bg-transparent text-blue-400 border-2 border-blue-400 px-8 py-2.5 md:py-3 rounded-full font-bold hover:bg-blue-900/30 transition text-center text-xs md:text-sm uppercase tracking-wider">

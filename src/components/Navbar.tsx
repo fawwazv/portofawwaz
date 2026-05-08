@@ -55,8 +55,8 @@ export default function Navbar() {
             <Link href="#tentang" onClick={(e) => handleScroll(e, 'tentang')} className="px-5 py-2.5 rounded-full hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 border border-transparent hover:border-blue-500/20">
               Tentang
             </Link>
-            <Link href="#proyek" onClick={(e) => handleScroll(e, 'proyek')} className="px-5 py-2.5 rounded-full hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 border border-transparent hover:border-blue-500/20">
-              Proyek
+            <Link href="#pengalaman" onClick={(e) => handleScroll(e, 'pengalaman')} className="px-5 py-2.5 rounded-full hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 border border-transparent hover:border-blue-500/20">
+              Pengalaman
             </Link>
             <Link href="#sertifikasi" onClick={(e) => handleScroll(e, 'sertifikasi')} className="px-5 py-2.5 rounded-full hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 border border-transparent hover:border-blue-500/20">
               Sertifikasi
@@ -87,7 +87,7 @@ export default function Navbar() {
         <div className="md:hidden bg-slate-900/95 backdrop-blur-xl border-t border-slate-800 shadow-xl px-4 py-4 space-y-2">
           <Link href="#beranda" onClick={(e) => handleScroll(e, 'beranda')} className="block px-5 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-blue-500/10 hover:text-blue-400 transition-all">Beranda</Link>
           <Link href="#tentang" onClick={(e) => handleScroll(e, 'tentang')} className="block px-5 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-blue-500/10 hover:text-blue-400 transition-all">Tentang</Link>
-          <Link href="#proyek" onClick={(e) => handleScroll(e, 'proyek')} className="block px-5 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-blue-500/10 hover:text-blue-400 transition-all">Proyek</Link>
+          <Link href="#pengalaman" onClick={(e) => handleScroll(e, 'pengalaman')} className="block px-5 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-blue-500/10 hover:text-blue-400 transition-all">Pengalaman</Link>
           <Link href="#sertifikasi" onClick={(e) => handleScroll(e, 'sertifikasi')} className="block px-5 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-blue-500/10 hover:text-blue-400 transition-all">Sertifikasi</Link>
           <Link href="#kontak" onClick={(e) => handleScroll(e, 'kontak')} className="block px-5 py-3 rounded-xl text-sm font-medium text-slate-300 hover:bg-blue-500/10 hover:text-blue-400 transition-all">Kontak</Link>
         </div>
