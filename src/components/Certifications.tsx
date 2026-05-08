@@ -11,7 +11,7 @@ export default function Certifications() {
       date: "2024",
       expiry: "2027",
       image: "/certs/myskill-backend.jpg",
-      driveLink: "#" 
+      driveLink: "https://drive.google.com/file/d/1uhJ1w4B_YzBpYVQPvHgbYLnYYhkDMUh1/view?usp=sharing" 
     },
     {
       title: "Belajar Membuat Aplikasi Back-End Pemula",
